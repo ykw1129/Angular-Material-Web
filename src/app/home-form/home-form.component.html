@@ -1,0 +1,11 @@
+  <label>
+    Name:
+    <input type="text" [formControl]="name">
+  </label>
+  <label  for="">
+    IsMan:
+    <input type="checkbox" name="isMan" id="" value="Man">Man
+    <input type="checkbox" name="isMan" id="" value="Woman">Woman
+  </label>
+  <p>{{isMan.value}}</p>
+  <p>{{name.value}}</p>
