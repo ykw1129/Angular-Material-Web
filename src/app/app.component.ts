@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = '我的第一个angular App';
+  title = '我的第一个angularApp';
 }
