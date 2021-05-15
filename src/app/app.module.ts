@@ -13,14 +13,16 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { from } from 'rxjs';
 import { HomeFormComponent } from './home-form/home-form.component';
+import { BeautyDirective } from '../directive/beauty';
 
+// Directive import
 const  AllMaterialModules = [MatToolbarModule,MatIconModule,MatButtonModule,MatInputModule]
-
 @NgModule({
   declarations: [
     AppComponent,
       HeaderComponent,
-      HomeFormComponent
+      HomeFormComponent,
+      BeautyDirective
    ],
   imports: [
     BrowserModule,
@@ -30,8 +32,9 @@ const  AllMaterialModules = [MatToolbarModule,MatIconModule,MatButtonModule,MatI
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 export class MaterialModule { }
