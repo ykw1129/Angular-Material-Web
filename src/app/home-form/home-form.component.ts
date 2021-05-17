@@ -7,20 +7,29 @@ import { FormControl,FormGroup } from '@angular/forms'
   styleUrls: ['./home-form.component.less'],
 })
 export class HomeFormComponent implements OnInit{
-  name = new FormControl()
-  sex = new FormControl('Man')
+  myForm = new FormGroup({
+    name : new FormControl(),
+    sex : new FormControl('Man'),
+    address: new FormGroup({
+      street: new FormControl(''),
+      city: new FormControl(''),
+      state: new FormControl(''),
+      zip: new FormControl('')
+    })
+  })
+
   constructor() {
 
    }
-  radioChange(){
-    console.log(this.sex)
-  }
 
   ngOnInit(){
 
   }
   ngDoCheck(){
     console.log('ngDoCheck')
+  }
+  onSubmit(){
+    console.table(this.myForm.value)
   }
 
 }

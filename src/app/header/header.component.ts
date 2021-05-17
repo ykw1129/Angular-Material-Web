@@ -13,10 +13,6 @@ class MyService {
 
 export class HeaderComponent implements OnInit  {
   constructor(private route:ActivatedRoute,private router:Router) { }
-  headerClick(){
-    // 编程式路由
-    this.router.navigate(['/home']);
-  }
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
       console.log(params)
