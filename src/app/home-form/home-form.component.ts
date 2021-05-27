@@ -37,7 +37,7 @@ export class HomeFormComponent implements OnInit {
   }
   // 事件控制颜色
   @HostListener('onmouseover') onMouseover(){
-    console.log(123)
+    this.el.nativeElement.style.color = 'red'
   }
 }
 
