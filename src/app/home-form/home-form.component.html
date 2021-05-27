@@ -1,7 +1,11 @@
-<form  [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
-    <mat-label>Name:</mat-label>
-    <input matInput formControlName="name" name="name">
+    <mat-label
+      >Name:<span *ngIf="form.name.errors?.required">Name is required</span>
+      </mat-label
+    >
+
+    <input matInput formControlName="name" name="name" />
   </mat-form-field>
   <mat-divider></mat-divider>
   <mat-form-field appearance="fill">
@@ -12,10 +16,14 @@
     </mat-select>
   </mat-form-field>
   <mat-divider></mat-divider>
-  <mat-form-field appearance="fill">
-    Adress
-    <mat-form-field appearance="fill">
-    </mat-form-field>
-  </mat-form-field>
   <button mat-raised-button color="primary" type="submit">提交</button>
+</form>
+<form (ngSubmit)="onSubmit()" #modelForm="ngForm" >
+
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="name" [(ngModel)]="model.name">
+  <label for="sex">Sex:</label>
+  <input id="sex" type="text" name="sex" [(ngModel)]="model.sex">
+  <p>{{model.name}}</p>
+  <p>{{model.sex}}</p>
 </form>
