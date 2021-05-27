@@ -19,7 +19,7 @@
   <button mat-raised-button color="primary" type="submit">提交</button>
 </form>
 <form (ngSubmit)="onSubmit()" #modelForm="ngForm" >
-
+  {{modelForm.valid}}
   <label for="name">Name:</label>
   <input id="name" type="text" name="name" [(ngModel)]="model.name">
   <label for="sex">Sex:</label>
