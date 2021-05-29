@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit,HostListener } from '@angular/core';
+import { Component, Injectable, OnInit} from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 
 @Component({
@@ -9,6 +9,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 export class HomeFormComponent implements OnInit {
   public myForm!: FormGroup;
   public user = { name: '', sex: 'Man' }
+  red="#888"
   public model = new Person('','Man')
   constructor() {
 
@@ -34,10 +35,6 @@ export class HomeFormComponent implements OnInit {
   }
   onSubmit() {
     console.table(this.myForm.valid)
-  }
-  // 事件控制颜色
-  @HostListener('onmouseover') onMouseover(){
-    this.el.nativeElement.style.color = 'red'
   }
 }
 
