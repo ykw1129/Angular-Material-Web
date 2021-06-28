@@ -23,8 +23,9 @@
   <label for="name">Name:</label>
   <input id="name" type="text" name="name" [(ngModel)]="model.name">
   <label for="sex">Sex:</label>
-  <input id="sex" type="text" name="sex" [(ngModel)]="model.sex">
+  <select id="sex" type="text" name="sex" [(ngModel)]="model.sex">
+    <option *ngFor="let sex of SEX_LIST" [ngValue]="sex">{{sex}}</option>
+  </select>
   <p>{{model.name}}</p>
   <p>{{model.sex}}</p>
-  <p [beauty]='"red"'>我爱你</p>
 </form>

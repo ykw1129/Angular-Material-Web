@@ -1,18 +1,21 @@
-import { Component, Injectable, OnInit} from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
-
+import { interval, fromEvent } from 'rxjs';
+import { take } from 'rxjs/operators'
 @Component({
   selector: 'app-home-form',
   templateUrl: './home-form.component.html',
   styleUrls: ['./home-form.component.less'],
 })
 export class HomeFormComponent implements OnInit {
+  public SEX_LIST:string[] = ['Man','Woman']
   public myForm!: FormGroup;
   public user = { name: '', sex: 'Man' }
-  red="#888"
-  public model = new Person('','Man')
+  public model = new Person('', 'Man')
   constructor() {
-
+    fromEvent(document, 'click')
+    .pipe(take(3))
+    .subscribe({ next: (x) => { console.log(x) } })
   }
 
   ngOnInit(): void {
@@ -35,6 +38,9 @@ export class HomeFormComponent implements OnInit {
   }
   onSubmit() {
     console.table(this.myForm.valid)
+  }
+  getDefaultSelect(){
+
   }
 }
 
