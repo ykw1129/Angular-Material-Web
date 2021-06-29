@@ -13,9 +13,6 @@ export class HomeFormComponent implements OnInit {
   public user = { name: '', sex: 'Man' }
   public model = new Person('', 'Man')
   constructor() {
-    fromEvent(document, 'click')
-    .pipe(take(3))
-    .subscribe({ next: (x) => { console.log(x) } })
   }
 
   ngOnInit(): void {
