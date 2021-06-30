@@ -11,7 +11,6 @@ export class HomeFormComponent implements OnInit {
   public SEX_LIST:string[] = ['Man','Woman']
   public myForm!: FormGroup;
   public user = { name: '', sex: 'Man' }
-  public model = new Person('', 'Man')
   constructor() {
   }
 
@@ -30,19 +29,7 @@ export class HomeFormComponent implements OnInit {
   get form() {
     return this.myForm.controls
   }
-  ngDoCheck() {
-    console.log(this.model)
-  }
   onSubmit() {
     console.table(this.myForm.valid)
-  }
-  getDefaultSelect(){
-
-  }
-}
-
-class Person {
-  constructor(public name: string, public sex: string) {
-
   }
 }

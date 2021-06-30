@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { from } from 'rxjs';
 import { HomeFormComponent } from './home-form/home-form.component';
 import { BeautyDirective } from './beauty.directive';
+import { LoginComponent } from './login/login.component';
 
 // Directive import
 const AllMaterialModules = [
@@ -37,7 +38,8 @@ const AllMaterialModules = [
     AppComponent,
     HeaderComponent,
     HomeFormComponent,
-    BeautyDirective
+    BeautyDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -2,8 +2,7 @@
   <mat-form-field appearance="fill">
     <mat-label
       >Name:<span *ngIf="form.name.errors?.required">Name is required</span>
-      </mat-label
-    >
+    </mat-label>
 
     <input matInput formControlName="name" name="name" />
   </mat-form-field>
@@ -17,15 +16,4 @@
   </mat-form-field>
   <mat-divider></mat-divider>
   <button mat-raised-button color="primary" type="submit">提交</button>
-</form>
-<form (ngSubmit)="onSubmit()" #modelForm="ngForm" >
-  {{modelForm.valid}}
-  <label for="name">Name:</label>
-  <input id="name" type="text" name="name" [(ngModel)]="model.name">
-  <label for="sex">Sex:</label>
-  <select id="sex" type="text" name="sex" [(ngModel)]="model.sex">
-    <option *ngFor="let sex of SEX_LIST" [ngValue]="sex">{{sex}}</option>
-  </select>
-  <p>{{model.name}}</p>
-  <p>{{model.sex}}</p>
 </form>
