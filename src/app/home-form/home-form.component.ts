@@ -10,7 +10,7 @@ import { take } from 'rxjs/operators'
 export class HomeFormComponent implements OnInit {
   public SEX_LIST:string[] = ['Man','Woman']
   public myForm!: FormGroup;
-  public user = { name: '', sex: 'Man' }
+  public user = { name: '', sex: '' }
   constructor() {
   }
 
