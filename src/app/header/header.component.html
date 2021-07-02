@@ -6,3 +6,11 @@
     <span>login</span>
   </div>
 </mat-toolbar>
+<mat-sidenav-container class="sidenav">
+  <mat-sidenav mode="side" [(opened)]="opened">
+      Sidenav content
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <button mat-button (click)="opened=!opened">toggle</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -13,11 +13,12 @@ class MyService {
 
 export class HeaderComponent implements OnInit  {
   @Input()red='red'
+  public opened:boolean
   constructor(private route:ActivatedRoute,private router:Router) {
+    this.opened = false
   }
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
-      console.log(params)
     })
   }
 
