@@ -1,37 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {ReactiveFormsModule,FormsModule} from '@angular/forms'
-
-import { MatButtonModule } from '@angular/material/button'
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon'
-import { MatInputModule } from '@angular/material/input'
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { from } from 'rxjs';
 import { HomeFormComponent } from './home-form/home-form.component';
+import { BeautyDirective } from './beauty.directive';
+import { MaterialModule } from './material/material.module';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component'
 
-const  AllMaterialModules = [MatToolbarModule,MatIconModule,MatButtonModule,MatInputModule]
 
 @NgModule({
   declarations: [
     AppComponent,
-      HeaderComponent,
-      HomeFormComponent
-   ],
+    HeaderComponent,
+    HomeFormComponent,
+    BeautyDirective,
+    HomeComponent,
+    LoginComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AllMaterialModules,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MaterialModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export class MaterialModule { }

@@ -1,11 +1,18 @@
-  <label>
-    Name:
-    <input type="text" [formControl]="name">
-  </label>
-  <label>
-    IsMan:
-    <input type="radio" name="isMan" value="Man" [formControl]="sex" >Man
-    <input type="radio" name="isMan" value="Woman" [formControl]="sex" >Woman
-  </label>
-  <p>{{sex.value}}</p>
-  <p>{{name.value}}</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label
+      >Name:<span *ngIf="form.name.errors?.required">Name is required</span>
+    </mat-label>
+    <input matInput formControlName="name" name="name" />
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select formControlName="sex" name="sex">
+      <mat-option value="Man">Man</mat-option>
+      <mat-option value="Woman">Woman</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <button mat-raised-button color="primary" type="submit">提交</button>
+</form>
