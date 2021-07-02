@@ -8,9 +8,12 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatButtonToggleModule } from '@angular/material/button-toggle'
 import { MatDividerModule } from '@angular/material/divider'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatSidenavModule} from '@angular/material/sidenav'
 
 // Directive import
 const AllMaterialModules = [
+  MatProgressSpinnerModule,
   MatToolbarModule,
   MatIconModule,
   MatButtonModule,
@@ -19,7 +22,8 @@ const AllMaterialModules = [
   MatSelectModule,
   MatCheckboxModule,
   MatButtonToggleModule,
-  MatDividerModule
+  MatDividerModule,
+  MatSidenavModule
 ]
 
 @NgModule({

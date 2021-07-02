@@ -15,4 +15,11 @@
 <button color="accent" mat-raised-button>click me</button>
 <button color="warn" mat-raised-button>click me</button>
 <mat-button-toggle #toggleBtn>Toggle</mat-button-toggle>
-{{toggleBtn.checked}}
+{{ toggleBtn.checked }}
+<mat-button-toggle-group #toggleGroup="matButtonToggleGroup" vertical="false">
+  <mat-button-toggle value="1"> Choice1 </mat-button-toggle>
+  <mat-button-toggle value="2"> Choice2 </mat-button-toggle>
+</mat-button-toggle-group>
+{{toggleGroup.value}}
+<mat-spinner></mat-spinner>
+<mat-progress-spinner mode="determinate" [value]="progressLength" color="primary"></mat-progress-spinner>
