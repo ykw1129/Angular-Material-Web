@@ -7,10 +7,24 @@
   </div>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav">
-  <mat-sidenav mode="side" [(opened)]="opened">
+  <mat-sidenav  (opened)="log('open')" (closed)="log('close')" #sidenav mode="side" [(opened)]="opened">
       Sidenav content
   </mat-sidenav>
   <mat-sidenav-content>
       <button mat-button (click)="opened=!opened">toggle</button>
+      <button mat-button (click)="sidenav.open()">open</button>
+      <button mat-button (click)="sidenav.close()">close</button>
+      <button mat-button (click)="sidenav.toggle()">toggle</button>
+      <div>
+        <mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+          <button mat-menu-item [matMenuTriggerFor]="frontEndMenu">前端</button>
+          <button mat-menu-item>后端</button>
+        </mat-menu>
+        <mat-menu #frontEndMenu="matMenu">
+          <button mat-menu-item>js</button>
+          <button mat-menu-item>css</button>
+        </mat-menu>
+        <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+      </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

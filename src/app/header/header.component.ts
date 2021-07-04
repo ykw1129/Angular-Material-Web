@@ -21,5 +21,8 @@ export class HeaderComponent implements OnInit  {
     this.route.queryParams.subscribe(params=>{
     })
   }
+  log(e:string){
+    console.log(e)
+  }
 
 }

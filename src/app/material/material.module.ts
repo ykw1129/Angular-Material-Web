@@ -10,7 +10,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle'
 import { MatDividerModule } from '@angular/material/divider'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatSidenavModule} from '@angular/material/sidenav'
-
+import { MatMenuModule } from '@angular/material/menu'
 // Directive import
 const AllMaterialModules = [
   MatProgressSpinnerModule,
@@ -23,7 +23,8 @@ const AllMaterialModules = [
   MatCheckboxModule,
   MatButtonToggleModule,
   MatDividerModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatMenuModule
 ]
 
 @NgModule({
