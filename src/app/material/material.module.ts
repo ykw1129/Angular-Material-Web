@@ -14,8 +14,10 @@ import { MatMenuModule } from '@angular/material/menu'
 import { MatListModule} from '@angular/material/list'
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatExpansionModule} from '@angular/material/expansion'
+import { CdkAccordionModule} from '@angular/cdk/accordion'
 // Directive import
 const AllMaterialModules = [
+  CdkAccordionModule,
   MatListModule,
   MatProgressSpinnerModule,
   MatToolbarModule,

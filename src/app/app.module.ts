@@ -10,6 +10,7 @@ import { BeautyDirective } from './beauty.directive';
 import { MaterialModule } from './material/material.module';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component'
+import { AboutComponent } from './about/about.component'
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component'
     HomeFormComponent,
     BeautyDirective,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
