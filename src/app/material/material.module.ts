@@ -11,8 +11,11 @@ import { MatDividerModule } from '@angular/material/divider'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatSidenavModule} from '@angular/material/sidenav'
 import { MatMenuModule } from '@angular/material/menu'
+import { MatListModule} from '@angular/material/list'
+import { MatGridListModule } from '@angular/material/grid-list'
 // Directive import
 const AllMaterialModules = [
+  MatListModule,
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatIconModule,
@@ -24,7 +27,8 @@ const AllMaterialModules = [
   MatButtonToggleModule,
   MatDividerModule,
   MatSidenavModule,
-  MatMenuModule
+  MatMenuModule,
+  MatGridListModule
 ]
 
 @NgModule({
