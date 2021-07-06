@@ -12,19 +12,13 @@ class MyService {
 })
 
 export class HeaderComponent implements OnInit  {
-  @Input()red='red'
-  public opened:boolean
-  public listItem:any[]
+
   constructor(private route:ActivatedRoute,private router:Router) {
-    this.opened = false
-    this.listItem = ['home','about','concat']
+
   }
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
     })
-  }
-  log(e:string){
-    console.log(e)
   }
 
 }

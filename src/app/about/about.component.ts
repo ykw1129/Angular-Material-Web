@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.less']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  public opened:boolean
+  public listItem:any[]
+  constructor() {
+    this.opened = false
+    this.listItem = ['home','about','concat']
+  }
   ngOnInit() {
   }
-
+  log(e:string){
+    console.log(e)
+  }
 }
