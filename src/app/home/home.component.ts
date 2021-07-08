@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
-
+  public tabs:any[]
   constructor() {
-
+    this.tabs = ['Angular','React','Vue']
    }
   ngOnInit() {
+  }
+  logChange(index:any){
+    console.log(index)
   }
 
 }
