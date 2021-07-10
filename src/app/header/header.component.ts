@@ -7,13 +7,17 @@ import {Router,ActivatedRoute,ParamMap} from '@angular/router'
 })
 
 export class HeaderComponent implements OnInit  {
-
-  constructor(private route:ActivatedRoute,private router:Router) {
-
+  public showFiller:boolean
+  public slideNavLink:any[]
+  constructor(private router:Router) {
+      this.showFiller = false
+      this.slideNavLink =  this.getRouteArray(this.router.config)
   }
   ngOnInit() {
-    this.route.queryParams.subscribe(params=>{
-      console.log(params)
-    })
+  }
+  getRouteArray(arr:any[]){
+      let routeArray = JSON.parse(JSON.stringify(arr))
+      routeArray.splice(0,1)
+      return routeArray
   }
 }
