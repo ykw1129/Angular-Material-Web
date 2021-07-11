@@ -1,2 +1,5 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<mat-sidenav-container class="container">
+  <mat-sidenav [opened]="isOpened" mode="side"> Sidenav content </mat-sidenav>
+  <app-header (click)="sideToggle()" [title]="title"></app-header>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
